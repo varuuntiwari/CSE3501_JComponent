@@ -1,0 +1,93 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+        <title>Login</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                font-family: 'Staatliches', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url("https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #menu {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 65vw;
+                height: 100vh;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .options {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column nowrap;
+                color: black;
+                /* rgb(255, 255, 255); */
+                font-size: 24px;
+                width: 11vw;
+                height: 10vh;
+                overflow: hidden;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            .options:hover {
+                cursor: pointer;
+            }
+            .name {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+            .topic {
+                display: none;
+                padding: 2px;
+                height: 0%;
+            }
+            .options:hover {
+                background-color: rgba(129, 129, 206, 0.3);
+            }
+            .options:hover .name{
+                display: none;
+                height: 0%;
+            }
+            .options:hover .topic{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <div class="options" onclick="window.location.assign('xss_injection/index.html')">
+                <div class="name">Ankita</div>
+                <div class="topic">XSS<br>Injection</div>
+            </div>
+            <div class="options" onclick="window.location.assign('rce/index.php')">
+                <div class="name">Varun</div>
+                <div class="topic">Remote Code<br>Execution</div>
+            </div>
+            <div class="options" onclick="window.location.assign('misconfig/index.html')">
+                <div class="name">Argho</div>
+                <div class="topic">Security<br>Misconfiguration</div>
+            </div>
+            <div class="options" onclick="window.location.assign('exposure/index.php')">
+                <div class="name">Devjyoti</div>
+                <div class="topic">Sensitive Data<br>Exposure</div>
+            </div>
+            <div class="options" onclick="window.location.assign('broke_auth/index.php')">
+                <div class="name">Vibha</div>
+                <div class="topic">Broken<br>Authentication</div>
+            </div>
+        </div>
+    </body>
+</html>

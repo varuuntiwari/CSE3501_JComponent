@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <style type="text/css">
+            * { font-family: 'Staatliches', sans-serif; }
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url("bg1.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            #submission {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column nowrap;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="submission">
+            <form id="feedback" action="submit_hw.php" method="POST" enctype="multipart/form-data">
+                <label for="name">Your name</label><p></p>
+                <input type="text" name="name" placeholder="Registration Number"><hr>
+                Additional notes with homework<p></p>
+                <textarea name="feedback" form="feedback" id="feedbackarea"></textarea><hr>
+                Attach PDF of scanned pages<p></p>
+                <input type="file" name="attachedFile"><hr>
+                <input type="submit" value="Submit Homework">
+            </form>
+        </div>
+    </body>
+</html>
